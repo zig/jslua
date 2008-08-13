@@ -562,6 +562,7 @@ end
 function dofile(file )
    local source = jslua ( file )
    local module , error = loadstring ( source )
+   source = nil 
    if module then
       module ( )
    else

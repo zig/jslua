@@ -645,6 +645,7 @@ function jslua(f) {
 function dofile(file) {
 	var source = jslua(file);
 	var module, error = loadstring(source);
+	source = nil; // allow source to be garbage collected
 	if (module) {
 		//setfenv(module, table); // why do I need to do this ??
 		module();

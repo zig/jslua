@@ -1,5 +1,7 @@
 /* javascript language executed through the lua VM */
 
+// line comment
+
 var function printf(format, ...) {
 	print(string.format(format, ...));
 }
