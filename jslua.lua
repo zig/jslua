@@ -2,7 +2,7 @@
 -- 
 -- * jslua - transform javascript like syntax into lua
 -- *
--- * @author : Vincent Penne (ziggy@sashipa.com)
+-- * @author : Vincent Penne (ziggy at zlash.com)
 -- *
 -- *
 if arg [ 0 ] then
