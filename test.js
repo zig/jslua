@@ -49,11 +49,12 @@ for (_, v in pairs({ 1, 2, 3 }))
 	pr(v);
 
 
-/* completely encapsulated account */
+/* completely encapsulated account
+ * balance is both a private property and argument of the constructor */
 local function CreateAccount(balance)
 {
-	var self;
-	self = {
+	var public;  // public interface
+	public = {
 		Deposit = function(amount) {
 			balance += amount;
 		},
@@ -62,7 +63,7 @@ local function CreateAccount(balance)
 		},
 	};
 
-	return self;
+	return public;
 }
 
 local account = CreateAccount(0);
