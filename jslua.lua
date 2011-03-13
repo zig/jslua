@@ -12,6 +12,7 @@ format = string . format
 function enter_namespace(name )
    local parent = getfenv ( 2 )
    local namespace = { parent_globals = parent }
+   local i , v 
    for i , v in pairs ( parent ) do
       if i ~= "parent_globals" then
          namespace [ i ]= v 

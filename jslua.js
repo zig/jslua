@@ -15,7 +15,8 @@ format = string.format;
 function enter_namespace(name) {
 	var parent = getfenv(2);
 	var namespace = { parent_globals = parent };
-	
+
+	var i, v;
 	for (i, v in pairs(parent))
 		if (i != "parent_globals")
 			namespace[i] = v;
